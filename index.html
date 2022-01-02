@@ -1,0 +1,64 @@
+<html>
+    <header>
+
+    </header>
+    <body>
+        <script>
+            var score = 0;
+            var total = 1000;
+
+            function upScore () {
+                score = score + 100;
+                var h1 = document.getElementById("score");
+                var levimg = document.getElementById("levimg");
+
+                if(score == 1000 && total == 1000) {
+                    score = 0;
+                    total = 2000;
+                    levimg.src = "lev2.png";
+                }
+
+                if(score == 2000 && total == 2000) {
+                    score = 0;
+                    total = 3000;
+                    levimg.src = "lev3.png";
+                }
+
+                if(score == 3000 && total == 3000) {
+                    score = 0;
+                    total = 4000;
+                    levimg.src = "lev4.png";
+                }
+
+                if(score == 4000 && total == 4000) {
+                    score = 0;
+                    total = 5000;
+                    levimg.src = "lev5.png";
+                }
+
+                if(score == 5000 && total == 5000) {
+                    score = 0;
+                    total = 6000;
+                    levimg.src = "lev6.png";
+                }
+
+                if(score == 6000 && total == 6000) {
+                    score = 0;
+                    total = 7000;
+                    levimg.src = "lev7.png";
+                }
+
+                if(score == 7000 && total == 7000) {
+                    score = 0;
+                    total = 8000;
+                    levimg.src = "lev8.png";
+                }
+
+                h1.innerText = score + " / " + total;
+            }
+        </script>
+        <h1 id=score>0 / 1000</h1>
+        <img id=levimg src="lev1.png">
+        <button style="width: 500;height: 100" onclick="upScore();">강화</button>
+    </body>
+</html>
